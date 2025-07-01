@@ -7,11 +7,16 @@
 <body>
   <h1>Triple Agent Clone</h1>
   <div id="app">
+  
     <input id="roomCode" placeholder="Room Code" />
     <input id="name" placeholder="Your Name" />
     <button onclick="joinRoom()">Join</button>
     <button onclick="startGame()">Start Game</button>
     <div id="messages"></div>
+    <div id="playerListBox" style="margin-top: 20px;">
+      <h3>Players in Room:</h3>
+      <ul id="playerList"></ul>
+    </div>
     <div id="voteSection" style="display:none">
       <h2>Vote someone to imprison:</h2>
       <div id="voteOptions"></div>
