@@ -17,18 +17,13 @@ socket.on('connect', () => {
 });
 
 socket.on('playerList', (players) => {
-  const voteDiv = document.getElementById('voteOptions');
-  voteDiv.innerHTML = '';
-  players.forEach((p) => {
-    if (p.name) {
-      const btn = document.createElement('button');
-      btn.innerText = p.name;
-      btn.onclick = () => {
-        socket.emit('submitVote', { roomCode, targetId: p.id });
-        document.getElementById('voteSection').style.display = 'none';
-      };
-      voteDiv.appendChild(btn);
-    }
+  const list = document.getElementById('playerList');
+  list.innerHTML = ''; // Clear old list
+
+  players.forEach((player) => {
+    const li = document.createElement('li');
+    li.innerText = player.name;
+    list.appendChild(li);
   });
 });
 
