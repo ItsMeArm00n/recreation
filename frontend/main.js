@@ -1,4 +1,4 @@
-const socket = io('https://your-backend-url.onrender.com'); // <-- Replace with your backend URL
+const socket = io('https://recreation-b4h8.onrender.com'); // <-- Replace with your backend URL
 let roomCode = '';
 let myId = '';
 
